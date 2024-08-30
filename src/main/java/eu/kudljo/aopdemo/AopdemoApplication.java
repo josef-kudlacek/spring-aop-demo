@@ -26,11 +26,15 @@ public class AopdemoApplication {
 		Account myAccount = new Account();
 
 		accountDAO.addAccount(myAccount, true);
-
 		accountDAO.doWork();
 
-		membershipDAO.addSillyMember();
+		accountDAO.setName("foobar");
+		accountDAO.setServiceCode("silver");
 
+		String name = accountDAO.getName();
+		String code = accountDAO.getServiceCode();
+
+		membershipDAO.addSillyMember();
 		membershipDAO.goToSleep();
 	}
 
