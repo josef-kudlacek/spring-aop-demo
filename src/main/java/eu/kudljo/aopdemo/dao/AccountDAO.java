@@ -1,6 +1,8 @@
 package eu.kudljo.aopdemo.dao;
 
+import eu.kudljo.aopdemo.Account;
+
 public interface AccountDAO {
 
-    void addAccount();
+    void addAccount(Account account);
 }
