@@ -30,13 +30,13 @@ public class MyDemoLoggingAspect {
         } catch (Exception e) {
             System.out.println(e.getMessage());
 
-            result = "Major accident! But no worries, your private AOP helicopter is on the way!";
+            throw e;
         }
 
         long endTime = System.currentTimeMillis();
 
         long duration = endTime - beginTime;
-        System.out.println("\n=====>>> Duration: " + duration / 1000 + " seconds");
+        System.out.println("\n=====>>> Duration: " + duration / 1000.0 + " seconds");
 
         return result;
     }
